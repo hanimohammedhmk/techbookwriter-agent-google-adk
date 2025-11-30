@@ -65,7 +65,7 @@ The system contains **six ADK agents**:
 
 ---
 
-## **4. Requirements (Updated for ADK-only Implementation)**
+## **4. Requirements**
 
 ### **4.1 Title Agent Requirements**
 
@@ -127,8 +127,6 @@ The system contains **six ADK agents**:
   * Bold terms: at least 2–3 terms
   * Fenced code blocks: ```lang
   * Tables in markdown when needed
-
-Writer Agent must **use ADK agent responses**, not Python LLM calls.
 
 ---
 
