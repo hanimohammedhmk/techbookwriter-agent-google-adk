@@ -1,0 +1,496 @@
+{
+  "metadata": {
+    "topic": "event-driven microservices using Apache Kafka",
+    "language": "en",
+    "audience": "intermediate backend engineers with some microservices experience"
+  },
+  "chapters": [
+    {
+      "chapter_index": 1,
+      "summary": "Introduce the concepts of microservices and event-driven architectures, highlighting their benefits and challenges.",
+      "subsections": [
+        {
+          "title": "What are Microservices?",
+          "generator_prompt": "Explain the microservices architectural style, focusing on its core principles and advantages over monolithic applications.",
+          "brief": "Define microservices architecture and discuss its key characteristics.",
+          "keywords": [
+            "microservices",
+            "architecture",
+            "benefits"
+          ],
+          "word_target": 500,
+          "subsection_index": 1
+        },
+        {
+          "generator_prompt": "Describe event-driven architecture, emphasizing its asynchronous nature and the role of events in communication.",
+          "subsection_index": 2,
+          "title": "Understanding Event-Driven Architecture",
+          "brief": "Explain the principles of event-driven architecture and how it differs from request/response patterns.",
+          "word_target": 500,
+          "keywords": [
+            "event-driven",
+            "architecture",
+            "asynchronous"
+          ]
+        },
+        {
+          "generator_prompt": "Outline the benefits (e.g., scalability, resilience) and challenges (e.g., complexity, consistency) of event-driven microservices.",
+          "brief": "Discuss the advantages and disadvantages of combining microservices with event-driven architecture.",
+          "keywords": [
+            "benefits",
+            "challenges",
+            "microservices"
+          ],
+          "subsection_index": 3,
+          "title": "Benefits and Challenges of Event-Driven Microservices",
+          "word_target": 400
+        }
+      ],
+      "chapter_title": "Introduction to Event-Driven Microservices"
+    },
+    {
+      "subsections": [
+        {
+          "brief": "Define Apache Kafka and explain its key features and capabilities.",
+          "generator_prompt": "Explain what Apache Kafka is, highlighting its capabilities as a distributed streaming platform and message broker.",
+          "title": "What is Apache Kafka?",
+          "keywords": [
+            "Kafka",
+            "streaming",
+            "distributed"
+          ],
+          "subsection_index": 1,
+          "word_target": 500
+        },
+        {
+          "keywords": [
+            "topics",
+            "partitions",
+            "brokers"
+          ],
+          "title": "Kafka Architecture: Topics, Partitions, and Brokers",
+          "subsection_index": 2,
+          "word_target": 600,
+          "brief": "Describe the fundamental components of Kafka architecture.",
+          "generator_prompt": "Describe Kafka's architecture, focusing on topics, partitions, brokers, and their roles in data storage and distribution."
+        },
+        {
+          "subsection_index": 3,
+          "title": "Producers and Consumers in Kafka",
+          "generator_prompt": "Explain how producers write data to Kafka and how consumers read data from Kafka, detailing the interaction flow.",
+          "brief": "Explain how producers and consumers interact with Kafka.",
+          "keywords": [
+            "producers",
+            "consumers",
+            "message"
+          ],
+          "word_target": 500
+        }
+      ],
+      "chapter_index": 2,
+      "summary": "Introduce Apache Kafka as a distributed streaming platform and its role in event-driven microservices.",
+      "chapter_title": "Introduction to Apache Kafka"
+    },
+    {
+      "chapter_title": "Setting Up a Kafka Development Environment",
+      "summary": "Guide readers through setting up a local Kafka development environment.",
+      "chapter_index": 3,
+      "subsections": [
+        {
+          "keywords": [
+            "installation",
+            "Kafka",
+            "Zookeeper"
+          ],
+          "brief": "Provide step-by-step instructions for installing Kafka and Zookeeper.",
+          "subsection_index": 1,
+          "generator_prompt": "Provide detailed, step-by-step instructions on how to install Kafka and Zookeeper on a local machine.",
+          "word_target": 600,
+          "title": "Installing Kafka and Zookeeper"
+        },
+        {
+          "keywords": [
+            "configuration",
+            "brokers",
+            "properties"
+          ],
+          "subsection_index": 2,
+          "title": "Configuring Kafka Brokers",
+          "word_target": 500,
+          "generator_prompt": "Explain the essential configurations for Kafka brokers, such as broker ID, listeners, and log directories.",
+          "brief": "Explain the essential Kafka broker configurations."
+        },
+        {
+          "keywords": [
+            "testing",
+            "producer",
+            "consumer"
+          ],
+          "generator_prompt": "Guide readers through testing the Kafka installation by producing and consuming messages to a test topic.",
+          "title": "Testing the Kafka Installation",
+          "subsection_index": 3,
+          "word_target": 400,
+          "brief": "Guide readers through testing the Kafka setup."
+        }
+      ]
+    },
+    {
+      "chapter_title": "Designing Event Schemas",
+      "summary": "Explain the importance of event schemas and how to design them effectively.",
+      "chapter_index": 4,
+      "subsections": [
+        {
+          "word_target": 500,
+          "brief": "Explain why event schemas are crucial for event-driven systems.",
+          "title": "Importance of Event Schemas",
+          "generator_prompt": "Explain the importance of event schemas for ensuring data consistency and compatibility in event-driven systems.",
+          "keywords": [
+            "schema",
+            "event",
+            "compatibility"
+          ],
+          "subsection_index": 1
+        },
+        {
+          "title": "Schema Evolution Strategies",
+          "word_target": 600,
+          "brief": "Discuss different strategies for evolving event schemas over time.",
+          "subsection_index": 2,
+          "generator_prompt": "Discuss different strategies for evolving event schemas, such as adding optional fields, using default values, and schema versioning.",
+          "keywords": [
+            "evolution",
+            "schema",
+            "versioning"
+          ]
+        },
+        {
+          "generator_prompt": "Introduce Apache Avro as a schema definition language and explain how it can be used to define and manage event schemas.",
+          "word_target": 500,
+          "title": "Using Avro for Event Schemas",
+          "keywords": [
+            "Avro",
+            "schema",
+            "serialization"
+          ],
+          "brief": "Introduce Apache Avro as a schema definition language.",
+          "subsection_index": 3
+        }
+      ]
+    },
+    {
+      "chapter_title": "Implementing Producers and Consumers",
+      "summary": "Guide readers through implementing Kafka producers and consumers using a programming language (e.g., Java or Python).",
+      "chapter_index": 5,
+      "subsections": [
+        {
+          "brief": "Explain how to configure Kafka producers.",
+          "title": "Configuring Kafka Producers",
+          "word_target": 500,
+          "generator_prompt": "Explain how to configure Kafka producers, including setting properties like bootstrap servers, serializers, and acknowledgments.",
+          "subsection_index": 1,
+          "keywords": [
+            "producer",
+            "configuration",
+            "properties"
+          ]
+        },
+        {
+          "brief": "Demonstrate how to write data to Kafka topics using a producer.",
+          "generator_prompt": "Demonstrate how to write data to Kafka topics using a producer, including code examples in a chosen programming language.",
+          "keywords": [
+            "producer",
+            "topic",
+            "message"
+          ],
+          "title": "Writing Data to Kafka Topics",
+          "word_target": 600,
+          "subsection_index": 2
+        },
+        {
+          "brief": "Explain how to configure Kafka consumers.",
+          "word_target": 500,
+          "title": "Configuring Kafka Consumers",
+          "keywords": [
+            "consumer",
+            "configuration",
+            "group"
+          ],
+          "subsection_index": 3,
+          "generator_prompt": "Explain how to configure Kafka consumers, including setting properties like bootstrap servers, deserializers, and group IDs."
+        },
+        {
+          "generator_prompt": "Demonstrate how to read data from Kafka topics using a consumer, including code examples in a chosen programming language.",
+          "subsection_index": 4,
+          "keywords": [
+            "consumer",
+            "topic",
+            "message"
+          ],
+          "word_target": 600,
+          "title": "Reading Data from Kafka Topics",
+          "brief": "Demonstrate how to read data from Kafka topics using a consumer."
+        }
+      ]
+    },
+    {
+      "chapter_title": "Building Event-Driven Microservices",
+      "summary": "Guide readers through building event-driven microservices using Kafka.",
+      "subsections": [
+        {
+          "title": "Identifying Microservice Boundaries",
+          "brief": "Discuss how to identify appropriate boundaries for microservices.",
+          "word_target": 500,
+          "generator_prompt": "Discuss how to identify appropriate boundaries for microservices based on domain-driven design principles.",
+          "keywords": [
+            "microservice",
+            "boundaries",
+            "domain"
+          ],
+          "subsection_index": 1
+        },
+        {
+          "title": "Implementing Microservice Communication with Kafka",
+          "word_target": 600,
+          "brief": "Explain how to implement communication between microservices using Kafka.",
+          "subsection_index": 2,
+          "keywords": [
+            "communication",
+            "microservices",
+            "events"
+          ],
+          "generator_prompt": "Explain how to implement communication between microservices using Kafka topics and events, focusing on asynchronous communication patterns."
+        },
+        {
+          "subsection_index": 3,
+          "title": "Handling Data Consistency",
+          "brief": "Discuss strategies for handling data consistency in event-driven microservices.",
+          "keywords": [
+            "consistency",
+            "data",
+            "transactions"
+          ],
+          "generator_prompt": "Discuss strategies for handling data consistency in event-driven microservices, such as using eventual consistency and compensating transactions.",
+          "word_target": 500
+        }
+      ],
+      "chapter_index": 6
+    },
+    {
+      "subsections": [
+        {
+          "word_target": 500,
+          "title": "Introduction to Kafka Streams",
+          "keywords": [
+            "Kafka Streams",
+            "real-time",
+            "processing"
+          ],
+          "generator_prompt": "Explain the purpose and benefits of Kafka Streams as a library for building real-time data processing applications on top of Kafka.",
+          "brief": "Explain the purpose and benefits of Kafka Streams.",
+          "subsection_index": 1
+        },
+        {
+          "keywords": [
+            "stream processing",
+            "applications",
+            "Kafka Streams"
+          ],
+          "brief": "Guide readers through building stream processing applications with Kafka Streams.",
+          "title": "Building Stream Processing Applications",
+          "word_target": 600,
+          "generator_prompt": "Guide readers through building stream processing applications with Kafka Streams, including defining topologies, processing events, and writing results to Kafka topics.",
+          "subsection_index": 2
+        },
+        {
+          "title": "Stateful Stream Processing",
+          "subsection_index": 3,
+          "generator_prompt": "Discuss stateful stream processing with Kafka Streams, including managing state, handling fault tolerance, and performing aggregations.",
+          "keywords": [
+            "stateful",
+            "stream processing",
+            "Kafka Streams"
+          ],
+          "word_target": 500,
+          "brief": "Discuss stateful stream processing with Kafka Streams."
+        }
+      ],
+      "chapter_title": "Kafka Streams for Real-Time Data Processing",
+      "chapter_index": 7,
+      "summary": "Introduce Kafka Streams as a library for building real-time data processing applications."
+    },
+    {
+      "subsections": [
+        {
+          "generator_prompt": "Explain how to configure authentication and authorization in Kafka using mechanisms like SASL/PLAIN, SASL/SCRAM, and ACLs.",
+          "keywords": [
+            "authentication",
+            "authorization",
+            "security"
+          ],
+          "subsection_index": 1,
+          "title": "Authentication and Authorization",
+          "brief": "Explain how to configure authentication and authorization in Kafka.",
+          "word_target": 500
+        },
+        {
+          "title": "Encryption with TLS/SSL",
+          "word_target": 600,
+          "subsection_index": 2,
+          "brief": "Explain how to encrypt communication between Kafka components using TLS/SSL.",
+          "generator_prompt": "Explain how to encrypt communication between Kafka components using TLS/SSL, including configuring brokers, producers, and consumers for secure communication.",
+          "keywords": [
+            "encryption",
+            "TLS",
+            "SSL"
+          ]
+        },
+        {
+          "subsection_index": 3,
+          "brief": "Discuss options for encrypting data at rest in Kafka.",
+          "generator_prompt": "Discuss options for encrypting data at rest in Kafka, such as using disk encryption or Kafka's built-in data encryption features.",
+          "word_target": 500,
+          "keywords": [
+            "encryption",
+            "data",
+            "rest"
+          ],
+          "title": "Data Encryption at Rest"
+        }
+      ],
+      "chapter_title": "Securing Kafka Clusters",
+      "summary": "Explain how to secure Kafka clusters using authentication, authorization, and encryption.",
+      "chapter_index": 8
+    },
+    {
+      "chapter_index": 9,
+      "summary": "Discuss how to monitor and observe Kafka clusters and event-driven microservices.",
+      "chapter_title": "Monitoring and Observability",
+      "subsections": [
+        {
+          "brief": "Explain how to monitor Kafka brokers using metrics and tools.",
+          "title": "Monitoring Kafka Brokers",
+          "subsection_index": 1,
+          "keywords": [
+            "monitoring",
+            "brokers",
+            "metrics"
+          ],
+          "word_target": 500,
+          "generator_prompt": "Explain how to monitor Kafka brokers using metrics like CPU usage, memory usage, network traffic, and JMX metrics, and tools like Prometheus and Grafana."
+        },
+        {
+          "subsection_index": 2,
+          "word_target": 600,
+          "keywords": [
+            "monitoring",
+            "producers",
+            "consumers"
+          ],
+          "brief": "Explain how to monitor Kafka producers and consumers.",
+          "generator_prompt": "Explain how to monitor Kafka producers and consumers using metrics like message rates, latency, and error rates, and tools like Kafka Exporter.",
+          "title": "Monitoring Producers and Consumers"
+        },
+        {
+          "keywords": [
+            "tracing",
+            "distributed",
+            "microservices"
+          ],
+          "subsection_index": 3,
+          "brief": "Introduce the concept of distributed tracing and how it can be used to trace events across microservices.",
+          "title": "Distributed Tracing",
+          "generator_prompt": "Introduce the concept of distributed tracing and how it can be used to trace events across microservices using tools like Jaeger and Zipkin.",
+          "word_target": 500
+        }
+      ]
+    },
+    {
+      "subsections": [
+        {
+          "generator_prompt": "Discuss best practices for managing event schemas, such as using a schema registry, versioning schemas, and ensuring backward compatibility.",
+          "subsection_index": 1,
+          "keywords": [
+            "schema",
+            "management",
+            "best practices"
+          ],
+          "brief": "Discuss best practices for managing event schemas.",
+          "title": "Schema Management Best Practices",
+          "word_target": 500
+        },
+        {
+          "word_target": 600,
+          "title": "Error Handling and Fault Tolerance",
+          "brief": "Explain best practices for handling errors and ensuring fault tolerance in event-driven microservices.",
+          "keywords": [
+            "error handling",
+            "fault tolerance",
+            "retry"
+          ],
+          "generator_prompt": "Explain best practices for handling errors and ensuring fault tolerance in event-driven microservices, such as using retry mechanisms, dead-letter queues, and circuit breakers.",
+          "subsection_index": 2
+        },
+        {
+          "word_target": 500,
+          "generator_prompt": "Discuss techniques for optimizing the performance of Kafka and event-driven microservices, such as tuning Kafka configurations, optimizing producer and consumer code, and using compression.",
+          "subsection_index": 3,
+          "brief": "Discuss techniques for optimizing the performance of Kafka and event-driven microservices.",
+          "keywords": [
+            "performance",
+            "optimization",
+            "Kafka"
+          ],
+          "title": "Performance Optimization"
+        }
+      ],
+      "chapter_title": "Best Practices for Event-Driven Microservices with Kafka",
+      "summary": "Summarize best practices for designing, implementing, and operating event-driven microservices with Kafka.",
+      "chapter_index": 10
+    },
+    {
+      "summary": "Present case studies and real-world examples of event-driven microservices architectures using Kafka.",
+      "chapter_index": 11,
+      "chapter_title": "Case Studies and Real-World Examples",
+      "subsections": [
+        {
+          "word_target": 600,
+          "keywords": [
+            "e-commerce",
+            "platform",
+            "case study"
+          ],
+          "title": "E-commerce Platform",
+          "subsection_index": 1,
+          "brief": "Describe how an e-commerce platform can leverage event-driven microservices with Kafka.",
+          "generator_prompt": "Describe how an e-commerce platform can leverage event-driven microservices with Kafka for order processing, inventory management, and customer notifications."
+        },
+        {
+          "title": "Financial Services Application",
+          "brief": "Describe how a financial services application can use event-driven microservices with Kafka.",
+          "keywords": [
+            "financial services",
+            "application",
+            "case study"
+          ],
+          "word_target": 600,
+          "generator_prompt": "Describe how a financial services application can use event-driven microservices with Kafka for transaction processing, fraud detection, and real-time analytics.",
+          "subsection_index": 2
+        },
+        {
+          "generator_prompt": "Summarize the key takeaways from the book and discuss future trends in event-driven microservices with Kafka, such as the adoption of cloud-native technologies and the use of AI/ML for event processing.",
+          "subsection_index": 3,
+          "keywords": [
+            "conclusion",
+            "future",
+            "trends"
+          ],
+          "title": "Conclusion and Future Trends",
+          "brief": "Summarize the key takeaways and discuss future trends in event-driven microservices with Kafka.",
+          "word_target": 400
+        }
+      ]
+    }
+  ],
+  "title": "Event-Driven Microservices with Kafka",
+  "subtitle": "Designing Resilient, Scalable Systems for the Real World"
+}
